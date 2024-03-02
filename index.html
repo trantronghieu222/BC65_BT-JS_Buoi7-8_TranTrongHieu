@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Mảng -->
+    <section>
+      <div class="container">
+        <h1 class="text-primary pt-5 text-center">Bài tập mảng</h1>
+        <div class="form-group">
+          <label for=""></label>
+          <input
+            type="text"
+            name=""
+            id="inputN"
+            class="form-control"
+            placeholder="Nhập số n"
+            aria-describedby="helpId"
+          />
+        </div>
+        <button type="button" id="btnThem" class="btn btn-primary">
+          Thêm số
+        </button>
+        <div id="result" class="alert alert-success py-4 my-4"></div>
+      </div>
+    </section>
+
+    <hr />
+    <!-- Nhóm bài tập -->
+    <div class="accordion container" id="baiTapMang">
+      <!-- Câu 1 -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              1. Tổng số dương
+            </button>
+          </h5>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>Tổng các số dương trong mảng</p>
+            <button type="button" class="btn btn-primary" id="btnSumPositive">
+              Tính tổng
+            </button>
+            <div id="result__bai1" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 2 -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              2. Đếm số dương
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>Đếm có bao nhiêu số dương trong mảng.</p>
+            <button type="button" class="btn btn-primary" id="btnCountPositive">
+              Đếm số
+            </button>
+            <div id="result__bai2" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 3 -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              3. Tìm số nhỏ nhất
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>Tìm số nhỏ nhất trong mảng.</p>
+            <button type="button" class="btn btn-primary" id="btnMin">
+              Tìm số nhỏ nhất
+            </button>
+            <div id="result__bai3" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 4 -->
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              4. Tìm số dương nhỏ nhất
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseFour"
+          class="collapse"
+          aria-labelledby="headingFour"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>Tìm số dương nhỏ nhất trong mảng.</p>
+            <button type="button" class="btn btn-primary" id="btnMinPositive">
+              Tìm số dương nhỏ nhất
+            </button>
+            <div id="result__bai4" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 5 -->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              5. Tìm số chẵn cuối cùng
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseFive"
+          class="collapse"
+          aria-labelledby="headingFive"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>
+              Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn
+              thì trả về -1.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnLastEvenNumver"
+            >
+              Tìm số chẵn
+            </button>
+            <div id="result__bai5" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 6 -->
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              6. Đổi chỗ
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseSix"
+          class="collapse"
+          aria-labelledby="headingSix"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>
+              Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí
+              muốn đổi chỗ giá trị).
+            </p>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for=""></label>
+                  <input
+                    type="text"
+                    name=""
+                    id="locate1"
+                    class="form-control"
+                    placeholder="Nhập vị trí số 1"
+                    aria-describedby="helpId"
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for=""></label>
+                  <input
+                    type="text"
+                    name=""
+                    id="locate2"
+                    class="form-control"
+                    placeholder="Nhập vị trí số 2"
+                    aria-describedby="helpId"
+                  />
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="btnSwap">
+              Đổi chỗ
+            </button>
+            <div id="result__bai6" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 7 -->
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              7. Sắp xếp tăng dần
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseSeven"
+          class="collapse"
+          aria-labelledby="headingSeven"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>Sắp xếp mảng theo thứ tự tăng dần.</p>
+            <button type="button" class="btn btn-primary" id="btnSortUp">
+              Sắp xếp tăng dần
+            </button>
+            <div id="result__bai7" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 8 -->
+      <div class="card">
+        <div class="card-header" id="headingEight">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              8. Tìm số nguyên tố đầu tiên
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseEight"
+          class="collapse"
+          aria-labelledby="headingEight"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>
+              Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên
+              tố thì trả về – 1.
+            </p>
+            <button type="button" class="btn btn-primary" id="btnFirstPrime">
+              Tìm số nguyên tố
+            </button>
+            <div id="result__bai8" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 9 -->
+      <div class="card">
+        <div class="card-header" id="headingNine">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              9. Đếm số nguyên
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseNine"
+          class="collapse"
+          aria-labelledby="headingNine"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>
+              Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số
+              nguyên?
+            </p>
+            <div class="form-group">
+              <label for=""></label>
+              <input type="text" name="" id="soThucN" class="form-control" placeholder="Nhập số" aria-describedby="helpId">
+            </div>
+            <button type="button" class="btn btn-primary" id="btnThemSoThuc">Thêm số</button>
+            <div id="result2" class="alert alert-success py-4 my-4"></div>
+            <button type="button" class="btn btn-primary" id="btnDemSoNguyen">Đếm số nguyên</button>
+            <div id="result__bai9" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Câu 10 -->
+      <div class="card">
+        <div class="card-header" id="headingTen">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link w-100 text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseTen"
+              aria-expanded="false"
+              aria-controls="collapseTen"
+            >
+              10. So sánh số lượng số âm và dương
+            </button>
+          </h5>
+        </div>
+        <div
+          id="collapseTen"
+          class="collapse"
+          aria-labelledby="headingTen"
+          data-parent="#baiTapMang"
+        >
+          <div class="card-body">
+            <p>
+              So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.
+            </p>
+            <button type="button" class="btn btn-primary" id="btnSoSanh">
+              So sánh
+            </button>
+            <div id="result__bai10" class="alert alert-success py-4 my-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
